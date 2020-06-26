@@ -1,0 +1,115 @@
+/* 主体内容 */
+/* 右边nav */
+#banner{
+    position: relative;
+}
+#main{
+    height: 1000px;
+    /* background: pink; */
+}
+#main .nav {
+    height: 500px;
+    /* width: 250px; */
+    margin-top: -50px;
+    /* background: blue; */
+    position: absolute;
+}
+#main .nav .title{
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    padding: 15px 55px;
+    background: #0077ed;
+}
+#main .nav .title p {
+    font-size: 12px;
+}
+#main .nav ul li {
+    text-align: center;
+    height: 38px;
+    line-height: 38px;
+    border-bottom: 1px solid #d8d8d8;
+}
+#main .nav ul li:hover{
+    background: #0077ed;
+   
+}
+#main .nav ul li:hover a{
+    color: #fff;
+}
+#main .nav ul li a{
+    font-size: 14px; 
+     color: #404041;
+}
+/* 图片 */
+#main .nav .navImg{
+    width: 250px;
+    height: 150px;
+    background: url(../images/jiameng.jpg);
+    margin-top: 8px;
+}
+/* 电话 */
+#main .nav .navTel{
+    font-size: 16px;
+    color: #fff;
+    background: #ef1722;
+    text-align: center;
+    padding: 20px 0;
+    
+}
+/* 右边listLeft */
+#main .listLeft{
+    width: 900px;
+    height: 900px;
+    /* border: 1px solid red; */
+}
+/* list导航 */
+#main .listLeft .title{
+    width: 900px;
+    height: 40px;
+    border: 1px solid #d8d8d8;
+    line-height: 40px;
+    text-indent: 20px;
+    margin-bottom: 10px;
+}
+/* list列表 */
+#main .listLeft .list{
+    width: 900px;
+}
+#main .listLeft .list ul li {
+    width: 210px;
+    height: 280px;
+    /* background: black; */
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 12px;
+}
+#main .listLeft .list  li img{
+    width: 210px;
+    height: 210px;
+}
+#main .listLeft>.list li .info{
+    color: black;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 30px;
+}
+/* 翻页按钮 */
+#main .button{
+    width: 260px;
+    height: 30px;
+    margin: 50px auto;
+    line-height: 30px;
+}
+#main .button span a {
+    border: 1px solid #e3e1e4;
+    padding: 2px;
+    margin: 0 4px;
+    cursor: pointer;
+}
+#main  .button .active a{
+    border: 0;
+    color: #ef1722;
+    
+}

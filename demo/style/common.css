@@ -1,0 +1,229 @@
+/* 公用css样式 */
+/* 左浮动 */
+.lf{
+    float: left;
+}
+/* 右浮动 */
+.rf{
+    float: right;
+}
+/* 清除浮动 */
+.clearfix::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+/* 版心 */
+.wrap{
+    width: 1200px;
+    margin: auto;
+}
+a{
+    text-decoration: none;
+    color: #8b8b8b;
+}
+/* 头部 */
+#header .title{
+    height: 40px;
+    line-height: 40px;
+    color: #8b8b8b;
+    border-bottom: 1px solid #ededed;
+}
+/* 头部右边图标 */
+#header .title span{
+    display: inline-block;
+}
+#header .title .icon1{
+    width: 16px;
+    height: 16px;
+    background: url(../images/tb_01.png);
+    position: relative;
+    top: 3px;
+}
+#header .title .icon2{
+    font-size: 18px;
+}
+#header .title .rf>span{
+    height: 40px;
+    margin-left: 10px;
+}
+/* 头部logo&search */
+#header .section {
+    height: 100px;
+    /* background: greenyellow; */
+}
+#header .section .logoLeft img{
+    width: 50px;
+    padding-top: 20px;
+}
+#header .section .logoLeft .lf p:nth-child(1){
+    padding-top: 20px;
+    font-size: 28px;
+    font-weight: bold;
+}
+#header .section .logoLeft .lf p:nth-child(2){
+    color: #8b8b8b;
+    font-size: 14px;
+}
+/* 头部搜索框 */
+#header .section .search {
+    width: 400px;
+    height: 38px;
+    border: 2px solid blue;
+   margin-top: 30px;
+   margin-left: 100px;
+}
+#header .section .search input{
+    width: 315px;
+    height: 38px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    text-indent: 10px;
+    background: none;
+}
+#header .section .search button{
+    width: 85px;
+    height: 100%;
+    background: #0077ed;
+    color: #fff;
+    border: none;
+    font-size: 18px;
+}
+/* logoRight */
+#header .section .logoRight{
+    padding-top: 22px;
+    margin-left: 50px;
+}
+#header .section .logoRight img{
+    width: 22px;
+    height: 22px;
+  
+}
+#header .section .logoRight p{
+    font-size: 22px;
+    color: black;
+    font-weight: bold;
+    margin-left: -30px;
+}
+/* 头部结束 */
+/* banner开始 */
+#banner{
+    height: 448px;
+    position: relative;
+    color: #fff;
+    margin-bottom: 60px;
+}
+#banner #box {
+    width: 100%;
+}
+#banner #box img{
+    width: 100%;
+}
+#banner #box ul li{
+    display: none;
+    transition: 1s;
+}
+#banner #box .active{
+    display: block;
+    transition: 1s;
+}
+#banner .section{
+    width: 600px;
+    height: 196px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+}
+#banner .section .big{
+    font-size: 44px;
+    text-align: center;
+    padding-bottom: 10px;
+}
+#banner .section .box{
+    margin-top: 10px;
+    height: 120px;
+    width: 600px;
+    background: url(../images/banner_tu.png);
+    position: relative;
+}
+#banner .section .box .box-top{
+    width: 200px;
+    color: #c6bcc2;
+    position: absolute;
+    top: -6px;
+    left: 200px;
+    text-align: center;
+}
+#banner .section .box .big{
+    padding-top:30px;
+    font-size: 20px;
+}
+#banner .section .box p {
+    text-align: center;
+   
+}
+/* banner结束 */
+/* footer页脚 */
+#footer{
+    height: 261px;
+    /* background: #0059b3; */
+    padding-top: 35px;
+}
+#footer .wrap{
+    height: 200px;
+    /* border-bottom: 5px solid red; */
+}
+#footer .listBox {
+    height: 200px;
+    width: 146px;
+    border-right: 1px solid #e5e5e5; 
+    color: #c5c5c5;
+    line-height: 22px;
+}
+#footer .listBox li:first-child{
+    font-size: 16px;
+    color: black;
+    line-height: 40px;
+}
+#footer .listBox2 {
+    padding-left: 50px;
+}
+#footer .listBox3 {
+    padding-left: 50px;
+}
+#footer .listBox4 {
+    padding-left: 70px;
+    width: 330px;
+}
+#footer .listBox4 span{
+    color: red;
+    font-size: 18px;
+}
+#footer .listBox5 {
+    padding-left: 50px;
+    width: 206px;
+}
+#footer .listBox5 .img img{
+    width: 90px;
+    height: 90px;
+    margin-right: 10px;
+}
+#footer .listBox5 li:nth-child(4){
+    padding-left: 20px;
+}
+#footer .listBox5 li:nth-child(5){
+    padding-left: 55px;
+}
+/* 页脚文字 */
+#footer .text{
+    height: 50px;
+    padding-top: 15px;
+    /* background: black; */
+    margin-top: 20px;
+    border-top: 1px solid #c5c5c5;
+    color: #8b8b8b;
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            width: 1920px;
+            height: 500px;
+            overflow: hidden;
+        }
+
+        ul {
+            width: 3000%;
+        }
+
+        .clearfix::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .lf {
+            float: left;
+        }
+
+        .rf {
+            float: right;
+        }
+
+        #silde {
+            width: 400px;
+            height: 200px;
+            border: 1px solid red;
+            margin: 100 auto;
+
+        }
+
+        ul {
+            width: 100%;
+
+        }
+
+        li {
+            height: 200px;
+            line-height: 200px;
+            background: pink;
+            display: none;
+        }
+
+        .active {
+            display: block
+        }
+    </style>
+</head>
+
+<body>
+    <div id="silde">
+        <ul id="box">
+            <li class="active">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+    </div>
+    <!-- <div class="box">
+        <ul>
+            <li class="lf">
+                <a href="#">
+                    <img src="./images/banner_01.jpg" alt=""> </a>
+            </li>
+            <li class="lf">
+                <a href="#">
+                    <img src="./images/banner_02.jpg" alt="">
+                </a>
+            </li>
+        </ul>
+    </div> -->
+
+    <script>
+        let n = 0;
+        // 获取标签
+        let box = document.querySelector('#box')
+        // let boxLi = document.querySelectorAll('li')
+        let boxLi = box.getElementsByTagName('li')
+        // 定变时器
+        let timer = setInterval(function () {
+            // 递增
+            n++;
+            if(n==boxLi.length){
+                n=0;
+            }
+            // 清除所有显示类型
+            for(let i=0;i<boxLi.length;i++){
+                boxLi[i].className = ''
+            }
+            // 显示当前类容
+            boxLi[n].className = 'active'
+        }, 1500)
+    </script>
+</body>
+
+</html>

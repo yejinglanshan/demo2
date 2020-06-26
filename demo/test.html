@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .clearfix::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .box ul li {
+            float: left;
+            height: 330px;
+            border: 1px solid red;
+            text-align: center;
+            /* z-index: 11; */
+            /* position: relative; */
+        }
+
+        .box ul li img {
+            vertical-align: bottom;
+            /* z-index: 1; */
+            /* position: relative; */
+            /* display: none; */
+        }
+
+        .box ul li p {
+            background: blue;
+            height: 30px;
+            line-height: 30px;
+        }
+
+    
+
+        .box .top ul li {
+            width: 200px;
+            height: 330px;
+            background: blue;
+            /* display: none; */
+        }
+
+        .box>ul>li>div {
+            width: 200px;
+            height: 330px;
+            background: blue;
+            z-index: 555;
+            display: none;
+            position: absolute;
+            opacity: 0.5;
+            top: 0;
+            line-height: 330px;
+            color: #fff;
+            font-size: 18px;
+        }
+
+        .box>ul>li:hover div {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+        <ul class="clearfix">
+            <li>
+                <img src="./images/tu_01.jpg" alt="">
+                <p>监控系统</p>
+                <div>监控系统</div>
+            </li>
+            <li>
+                <img src="./images/tu_02.jpg" alt="">
+                <p>监控系统</p>
+                <div>监控系统</div>
+            </li>
+            <li>
+                <img src="./images/tu_03.jpg" alt="">
+                <p>监控系统</p>
+                <div>监控系统</div>
+            </li>
+            <li>
+                <img src="./images/tu_04.jpg" alt="">
+                <p>监控系统</p>
+                <div>监控系统</div>
+            </li>
+            <li>
+                <img src="./images/tu_05.jpg" alt="">
+                <p>监控系统</p>
+                <div>监控系统</div>
+            </li>
+            <li>
+                <img src="./images/tu_06.jpg" alt="">
+                <p>监控系统</p>
+                <div>监控系统</div>
+            </li>
+            <!-- <div class="top">
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div> -->
+        </ul>
+
+    </div>
+</body>
+
+</html>

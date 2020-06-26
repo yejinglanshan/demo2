@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box1 {
+            width: 300px;
+            height: 300px;
+        }
+
+        .box1 li {
+            width: 100px;
+            height: 100px;
+            background: pink;
+            margin: 10px;
+
+        }
+
+        .box2 li {
+            width: 100px;
+            height: 100px;
+            background: pink;
+            margin: 10px;
+
+        }
+
+        .box2 li {
+            display: none;
+        }
+
+        .box1 li:hover+.box2 li {
+            display: block;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="box1">
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <ul class="box2">
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <!-- <script>
+            let n = 0;
+            // 获取标签
+            let box = document.querySelector('#box')
+            // let boxLi = document.querySelectorAll('li')
+            let boxLi = box.getElementsByTagName('li')
+            // 定变时器
+            let timer = setInterval(function () {
+                // 递增
+                n++;
+                if(n==boxLi.length){
+                    n=0;
+                }
+                // 清除所有显示类型
+                for(let i=0;i<boxLi.length;i++){
+                    boxLi[i].className = ''
+                }
+                // 显示当前类容
+                boxLi[n].className = 'active'
+            }, 1500)
+        </script> -->
+</body>
+
+</html>

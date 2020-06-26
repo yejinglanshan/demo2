@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            position: absolute;
+            left: 20px;
+            width: 100px;
+            height: 100px;
+            background: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <button id="btn300">点击到300</button>
+    <button id="btn600">点击到600</button>
+    <script>
+
+
+        function animate(obj, target, callback) {
+            // let timer = setInterval一个属性调用就要在内存中开辟空间
+            // 改写obj.timer 
+            // 避免bug 先清除定时器，避免点击事件点一次调用一次事件，事件多次叠加
+            clearInterval(obj.timer)
+            obj.timer = setInterval(function () {
+                // 步常值写在定时器里面
+                // let step = Math.ceil((target - obj.offsetLeft) / 10)
+                var step = (target - obj.offsetLeft) / 10
+                step = step > 0 ? Math.ceil(step) : Math.floor(step)
+                if (obj.offsetLeft == target) {
+                    clearInterval(obj.timer)
+                    // 回调函数
+                    if (callback) {
+                        callback()
+                    }
+                }
+                //把每次加1这个步长值改为一个慢慢变小的值目标值-现在的位置/10
+                obj.style.left = obj.offsetLeft + step + 'px'
+            }, 100)
+        }
+        let div = document.querySelector('div')
+        let btn300 = document.querySelector('#btn300')
+        let btn600 = document.querySelector('#btn600')
+        btn300.addEventListener('click', function () {
+            animate(div, 300)
+        })
+        btn600.addEventListener('click', function () {
+            animate(div, 600, function () {
+                alert('nihao')
+            })
+        })
+        // 匀速动画就是盒子当前位置+固定的值10
+        // 缓速动画就是盒子当前位置+变化的值
+
+    </script>
+</body>
+
+</html>
